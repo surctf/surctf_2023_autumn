@@ -1,0 +1,11 @@
+version: "3.2"
+services:
+  tg-contacts-task:
+    build:
+      context: .
+
+    container_name: 'tg-contacts-task'
+    restart: always
+
+    env_file:
+      - ./prod.env
