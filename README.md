@@ -47,7 +47,7 @@
 * [Сергей Кацур](https://github.com/richkats) — автор тасков
 * [Максим Заказчик](https://github.com/s4lat) — автор тасков  
 * [Егор Захаров](https://github.com/pigadoor) — автор тасков  
-* [Игорь Кизириди](https://github.com/CornaElicottero) — автор тасков  
+* [Игорь Кизириди](https://github.com/CornaElicottero) — автор тасков, разработчик регистрации 
 * [Даниил Петренко](https://github.com/bendermachine) — автор тасков
 * [Даниил Емельянов](https://github.com/fezwect) — автор тасков  
 
