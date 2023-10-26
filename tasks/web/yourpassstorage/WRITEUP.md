@@ -32,6 +32,6 @@ async def on_contact(msg: types.Message):
 ```
 
 Пробуем переслать боту контакт админа([@cooldoor](https://t.me/cooldoor)), бот нас авторизует, вызываем /passwords, получаем флаг:    
-<img src="/Users/vpar/Documents/surctf_2023_autumn/tasks/web/yourpassstorage/images/writeup2.png" width="250"/>  
+<img src="images/writeup2.png" width="250"/>  
 
 `flag: surctf_wow_auth_by_cont4ct_s0_s3cur3_beeee`
