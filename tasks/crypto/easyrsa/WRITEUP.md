@@ -1,4 +1,9 @@
 # EasyRSA
+
+Задание было в том, чтобы найти `p` и `q` и вычислить `d` для дешифровки нашего зашифрованного сообщения
+
+Прикладываю [solver.py](solver.py):
+
 ```python
 from sympy import Symbol, solve, core
 from Crypto.Util.number import long_to_bytes
