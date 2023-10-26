@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  reverse:
+    build: .
+    ports:
+      - "2372:2372"
