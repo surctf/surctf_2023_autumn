@@ -44,14 +44,7 @@ good = 0
 for q in questions:
     with open(os.path.join(QUESTIONS_DIR, q), "r") as f:
         q = json.loads(f.read())
-    # with open(os.path.join(QUESTIONS_DIR, q_img), "rb") as f:
-    #     img_base = base64.b64encode(f.read())
-    #
-    # a_json, _ = os.path.splitext(q_img)
-    # a_json = a_json + ".json"
-    # with open(os.path.join(ANSWERS_DIR, a_json), "r") as f:
-    #     a_json = json.loads(f.read())
-    #
+
     print(f"IMG: {q['image']}")
 
     answ = input("ANSW: ")
