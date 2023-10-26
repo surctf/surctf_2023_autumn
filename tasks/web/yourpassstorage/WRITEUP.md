@@ -3,8 +3,8 @@
 Бот просит нас авторизоваться в него через отправку контакта, отправляем, авторизуемся, видим что можем добавлять пароли.
 Пробуем добавить несколько паролей и узнаем что есть ограничение в пять паролей.  
 
-<img src="/Users/vpar/Documents/surctf_2023_autumn/tasks/web/yourpassstorage/images/writeup0.png" width="250"/>  
-<img src="/Users/vpar/Documents/surctf_2023_autumn/tasks/web/yourpassstorage/images/writeup1.png" width="250"/>
+<img src="images/writeup0.png" width="250"/>  
+<img src="images/writeup1.png" width="250"/>
 
 В сообщении об ограничении видим контакт админа [@cooldoor](https://t.me/cooldoor). Пока не ясно что нам это дает.
 
