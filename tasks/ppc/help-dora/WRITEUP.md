@@ -7,7 +7,7 @@
 Я написал скрипт, который отображает картинки и задетекченые боксы людей в отдельном окне с помощью opencv.
 Зеленым рисую бокс, красная точка - отправляемая координата, середина бокса.  
 
-<img src="/Users/vpar/Documents/surctf_2023_autumn/tasks/ppc/help-dora/images/writeup1.png" width="256"/>  
+<img src="images/writeup1.png" width="256"/>  
 
 Код [скрипта](solve.py):
 ```python
@@ -70,6 +70,6 @@ finally:
 ```
 
 После обработки всех изображений получаем вот такой вывод:  
-<img src="/Users/vpar/Documents/surctf_2023_autumn/tasks/ppc/help-dora/images/writeup2.png" width="512">  
+<img src="images/writeup2.png" width="512">  
 Для получения флага было необходимо набрать хотя бы 85% верных ответов. Координатой человека могла быть любая точка попадающая в задетекченный бокс, очевидно, что оптимальнее всего было бы отправлять середину бокса.  
 `flag: surctf_gratz_you_solv3d_1t_n0w_y0u_ar3_ml_3ng1n33r`
