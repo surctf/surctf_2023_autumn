@@ -117,7 +117,7 @@ TOKEN: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJmZGRlM2ZhNS03NmFkLTQwMWIt
 ]><foo>&xxe;</foo>
 ```
 Это пейлоад эксплуатирует [XXE](https://habr.com/ru/companies/vds/articles/454614/) уязвимость. Отправляем его, получаем флаг:    
-<img src="/Users/vpar/Documents/surctf_2023_autumn/tasks/web/pretty/images/writeup0.png" width="512"/>
+<img src="images/writeup0.png" width="512"/>
 
 Полный скрипт решающий таску можете найти в [solve.py](solve.py), в `stats_time` - подставьте строку времени с фронта сервиса, в `run_time` - целое число секунд "стабильной работы сервиса".  
 
