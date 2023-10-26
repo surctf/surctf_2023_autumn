@@ -1,4 +1,3 @@
-
 for num in range(100000, 100000000):
     if num > 0:
         num_str = str(num)
@@ -12,3 +11,4 @@ for num in range(100000, 100000000):
                                 if num % 89 == 0:
                                     if num % 8 != 0:
                                         print(num)
+                                        break
