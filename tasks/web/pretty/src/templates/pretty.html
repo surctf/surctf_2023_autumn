@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}Pretty {{ pretty_format }}{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div id="container">
+        <div id="left">
+            <form id="data-form" method="post" action="{{post_url}}">
+                <textarea id="source-text" name="ugly_data" rows="20" cols="80">{{ugly_data}}</textarea>
+            </form>
+        </div>
+        <div id="right">
+            <textarea id="formatted-text" name="pretty_data" rows="20" cols="80" readonly>{{pretty_data}}</textarea>
+        </div>
+    </div>
+    <button form="data-form" type="submit">Format</button>
+{% endblock %}

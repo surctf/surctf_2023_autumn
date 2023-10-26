@@ -1,0 +1,92 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - Flaskr</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<div class="nav">
+    <ul>
+        <li id="json-tab"><a href="{{url_for('pretty_json')}}">JSON</a></li>
+        <li id="python-tab"><a href="{{url_for('pretty_python')}}">Python</a></li>
+        <li id="html-tab"><a href="{{url_for('pretty_html')}}">HTML</a></li>
+<!--        <li id="xml-tab"><a href="{{url_for('pretty_xml')}}">XML</a></li>-->
+    </ul>
+</div>
+<section class="content">
+    <header>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #FDF4DC;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            margin-bottom: -60px;
+        }
+        #left, #right {
+            margin: 5px;
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            height: 400px;
+            overflow: auto;
+        }
+        .nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .nav ul li {
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .nav ul li:hover {
+            text-decoration: none;
+        }
+        h1 {
+            margin-bottom: -50px;
+        }
+
+        footer {
+            background-color: #333;
+        }
+
+
+
+
+
+        </style>
+        {% block header %}{% endblock %}
+    </header>
+    {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+    {% endfor %}
+    {% block content %}{% endblock %}
+
+    <footer>
+        <div class="nav">
+            <ul>
+                <li>Статистика на: {{ current_time }}</li>
+                <li>Кол-во запросов: {{ requests_count }}</li>
+                <li>Время стабильной работы сервиса: {{run_time}}s</li>
+                <li>Количество уникальных пользователей: {{uniq_users_count}}</li>
+            </ul>
+        </div>
+    </footer>
+</section>

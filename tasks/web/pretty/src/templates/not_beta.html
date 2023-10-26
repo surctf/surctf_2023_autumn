@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}BETA{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<p style="margin-top: 80px;"> Sorry only beta users allowed for '{{ view }}'</p>
+{% endblock %}

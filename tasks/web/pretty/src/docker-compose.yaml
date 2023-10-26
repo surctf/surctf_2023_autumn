@@ -1,0 +1,16 @@
+version: "3.2"
+services:
+  pretty:
+    build:
+      context: .
+
+    container_name: 'pretty'
+    restart: always
+
+    read_only: false
+
+    ports:
+      - "5000:5000"
+
+    env_file:
+      - ./prod.env
