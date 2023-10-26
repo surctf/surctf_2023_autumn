@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  pwn:
+    build: .
+    ports:
+      - "2371:2371"
