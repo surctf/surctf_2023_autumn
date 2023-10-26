@@ -1,0 +1,13 @@
+version: "3.2"
+services:
+  tg-chinder-task:
+    build:
+      context: .
+
+    container_name: 'tg-chinder-task'
+    restart: always
+
+    env_file:
+      - ./prod.env
+
+    read_only: true
