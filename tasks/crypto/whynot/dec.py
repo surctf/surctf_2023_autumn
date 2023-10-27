@@ -13,8 +13,6 @@ unhex_text = b''.fromhex(text)
 
 len_unhex_text = len(unhex_text)
 
-koala =[]
-
 for i in range(13, 38):
     if len_unhex_text % i == 0:
         a={}
@@ -32,8 +30,8 @@ for i in range(13, 38):
                 output += bytes([m])
 
 
-            for jopa in range(0,256):
-                flag = strxor(output, bytes([jopa])*len_flag)
+            for output_text in range(0,256):
+                flag = strxor(output, bytes([output_text])*len_flag)
 
                 try:
                     string_flag = flag.decode('utf-8')
