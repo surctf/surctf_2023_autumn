@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  mysql_container:
+    image: mysql:latest
+    container_name: mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: "redacted"
+      MYSQL_DATABASE: "users_db"
+    volumes:
+      - ./mysql.cnf:/etc/mysql/conf.d/mysql.cnf
+
+  web_app:
+    build: .
+    container_name: web_app_container
+    restart: always
+    ports:
+      - "1337:1337"
+    depends_on:
+      - mysql_container
